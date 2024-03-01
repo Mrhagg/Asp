@@ -24,15 +24,16 @@
 
         <div class="btn-switch">
           <label>Light</label>
-          <label class="switch" for="switch-mode">
-            <input type="checkbox" id="switch-mode" />
+          <label class="switch">
+            <input type="checkbox"/>
+            <span class="slider round"></span>
           </label>
           <label>Dark</label>
         </div>
 
         <div class="account-buttons">
           <a class="btn-gray" href="#"><i class="fa-regular fa-right-to-bracket"></i><span>Sign in</span></a>
-          <a class="btn-gray" href="#"><i class="fa-light fa-user"></i><span>Sign Up</span></a>
+          <a class="btn-theme" href="#"><i class="fa-light fa-user"></i><span>Sign Up</span></a>
         </div>
 
       </div>
@@ -40,13 +41,15 @@
 
     <main>
 
-      <section id="showcase">
-        <img class="background-image" src="images/Background-image.svg"></div>
+      <section class="showcase">
+        <img class="bg-image" src="images/Background-image.svg"></div>
         <div class="container">
-          <div class="content">
-            <h1>Task Managment Assistant You Gonna Love</h1>
-            <p>We offer you a new generation of task managment system. Plan, manage & track all your tasks in one flexible tool.</p>
-            <a class="btn-theme-s" href="#">Get started for free</a>
+          <div class="showcase-text">
+            <div class="text-holder">
+              <h1>Task Managment Assistant You Gonna Love</h1>
+              <p>We offer you a new generation of task managment system. Plan, manage & track all your tasks in one flexible tool.</p>
+              <button class="btn-theme-s" href="#">Get started for free</button>
+            </div>
             <h6>Largest companies use our tool to work efficiently</h6>
             <div class="brands">
               <img src="images/Brand1.svg" alt="">
@@ -58,14 +61,16 @@
         </div>
       </section>
 
-      <section id="features">
+      <section class="features">
         <div class="container">
           <h1>What Do You Get With Our Tool</h1>
           <p>Make sure all your tasks are organized so you can set the priorities and focus on important.</p>
-          <div class="box">
-            <img src="images/icon.svg" alt="">
-            <h5>Comments on Tasks</h5>
-            <p>Id mollis consectur congue egestas egestas suspendisse blandit justo.</p>
+          <div class="tool-features">
+            <div class="box">
+              <img src="images/icon.svg" alt="">
+              <h5>Comments on Tasks</h5>
+              <p>Id mollis consectur congue egestas egestas suspendisse blandit justo.</p>
+            </div>
             <div class="box">
               <img src="images/presentation.svg" alt="">
               <h5>Tasks Analytics</h5>
@@ -94,6 +99,32 @@
           </div>
         </div>
       </section>
+
+        <section class="themes">
+          <div class="container">
+            <h1><span class="white">Switch Between</span> <span class="black">Light & Dark Mode</span></h1>
+            <div class="macbook-container">
+              <img class="lg-mac" src="images/mockup.svg" alt="">
+              <div class="mask"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="manage">
+          <div class="container">
+            <img src="images/Dashboard.svg" alt="">
+            <h2>Mange Your Work</h1>
+            <div class="info-text">  
+              <a class="circle-check"><i class="fa-light fa-circle-check"></i>Powerful project managment</a>
+              <a class="circle-check"><i class="fa-light fa-circle-check"></i>Transparent work managment</a>
+              <a class="circle-check"><i class="fa-light fa-circle-check"></i>Manage work & focus on the most important tasks</a>
+              <a class="circle-check"><i class="fa-light fa-circle-check"></i>Track your progress with interactive charts</a>
+              <a class="circle-check"><i class="fa-light fa-circle-check"></i>Easiest way to track time spent on tasks</a>
+            </div>  
+              <button class="btn-theme" href="#">Learn More<i class="fa-regular fa-arrow-right"></i></button>
+          </div>
+        </section>
+      
     </main>
 
     <footer>
