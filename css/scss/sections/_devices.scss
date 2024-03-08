@@ -1,0 +1,51 @@
+.devices {
+    background-color: $gray-100;
+    padding: 60px;
+
+    .container {
+      display: flex;
+      justify-content: center;
+  
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+  
+        .image-container {
+          margin-right: 10rem;
+        }
+  
+        img {
+            position: relative;
+            bottom: 1rem;
+          max-width: 100%;
+          height: auto;
+          
+        }
+  
+        .editor-logo,
+        .google-logo,
+        .app-logo {
+          position: relative; 
+          left: 10px; 
+        }
+  
+        .editor-logo {
+          left: 16rem;
+          bottom: 3rem;
+        }
+  
+        .google-logo {
+          margin-left: 8.6rem; 
+          top: 5rem;
+        
+        }
+  
+        .app-logo {
+          position: relative;
+          right: 15rem;
+          
+        }
+      }
+    }
+  }
+  

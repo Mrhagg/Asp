@@ -1,46 +1,32 @@
-.manage {
+.manage .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   padding: 5rem;
+}
 
-  .container {
-    display: flex;
-    align-items: center;
-    text-align: start;
-    justify-content: flex-end;
+.info-container {
+  text-align: left; 
+  max-width: 400px; 
+  margin-left: 5rem;
+}
 
-    h2 {
-      position: relative;
-      bottom: 15rem;
-      left: 10rem;
-      font-size: $gray-900;
-    }
-   
-    .info-text {
-      display: grid;
-      grid-template-columns: 1, 1fr;
-      grid-area: auto;
+.info-text {
+  text-align: left; 
+}
 
-      .circle-check{
-        margin-right: 20px;
-      }
+h2 {
+  margin-bottom: 2.5rem; 
+}
 
-    
-    }
+.circle-check {
+  margin-bottom: 5px; 
+}
 
-    .btn-theme { 
-      @include button;
-      background: $theme;
-      color: $white;
-      border: none;
-      width: 20%;
-      margin-top: 20rem;
-      
-  
-      &:hover {
-          text-decoration: none;
-          background: $gray-700;
-          color: $white;
-      } 
-  }
-    
-  }
+.btn-theme {
+  margin-top: 10px; 
+}
+
+img {
+  margin-right: 20px; 
 }
