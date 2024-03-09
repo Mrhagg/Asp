@@ -42,6 +42,9 @@ header {
             grid-area: buttons; 
             display: none;
             gap: 15px;
+            box-sizing: border-box;
+
+            
 
             @include lg {
                 display: flex;

@@ -1,0 +1,17 @@
+.tools {
+    padding: 25px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .tool-info {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+
+        }
+       
+    }
+}

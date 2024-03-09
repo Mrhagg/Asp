@@ -399,6 +399,7 @@ header .container .account-buttons {
   grid-area: buttons;
   display: none;
   gap: 15px;
+  box-sizing: border-box;
 }
 @media (min-width: 992px) {
   header .container .account-buttons {
@@ -643,43 +644,95 @@ img {
 }
 
 .devices {
+  padding: 55px;
   background-color: #F3F6FF;
-  padding: 60px;
 }
 .devices .container {
   display: flex;
-  justify-content: center;
-}
-.devices .container .content-wrapper {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  color: #EFF2FC;
 }
-.devices .container .content-wrapper .image-container {
+.devices .container .image-container {
+  position: relative;
+  left: 4rem;
+}
+.devices .container .review-text {
+  display: grid;
+  grid-template-columns: 1f;
+  grid-area: auto;
   margin-right: 10rem;
+  margin-top: 6rem;
 }
-.devices .container .content-wrapper img {
+.devices .container h1 {
+  position: relative;
+  top: 2rem;
+  color: #0B0F19;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 48px !important;
+}
+.devices .container .app {
+  position: relative;
+  top: 1rem;
+  color: #9397AD;
+}
+.devices .container .box1 {
+  padding-top: 20px;
+}
+.devices .container .box1 h3 {
+  position: relative;
+  top: 1rem;
+}
+.devices .container .box1 p {
+  margin-top: 17px;
+  color: #9397AD;
+}
+.devices .container .box1 .editor-logo {
+  position: relative;
+  left: 15rem;
+  bottom: 5.5rem;
+}
+.devices .container .box1 .star1 {
+  position: relative;
+}
+.devices .container .box2 {
   position: relative;
   bottom: 1rem;
-  max-width: 100%;
-  height: auto;
 }
-.devices .container .content-wrapper .editor-logo,
-.devices .container .content-wrapper .google-logo,
-.devices .container .content-wrapper .app-logo {
+.devices .container .star2 {
   position: relative;
-  left: 10px;
+  bottom: 1rem;
 }
-.devices .container .content-wrapper .editor-logo {
-  left: 16rem;
-  bottom: 3rem;
-}
-.devices .container .content-wrapper .google-logo {
-  margin-left: 8.6rem;
-  top: 5rem;
-}
-.devices .container .content-wrapper .app-logo {
+.devices .container .google-logo {
   position: relative;
-  right: 15rem;
+  left: 15rem;
+  bottom: 5.5rem;
+}
+.devices .container .rating {
+  position: relative;
+  color: #9397AD;
+}
+.devices .container .google {
+  color: #9397AD;
+}
+
+.tools {
+  padding: 25px;
+}
+.tools .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tools .container .tool-info {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
 }
 
 footer {

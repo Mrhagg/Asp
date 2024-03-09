@@ -1,51 +1,94 @@
 .devices {
-    background-color: $gray-100;
-    padding: 60px;
+  padding: 55px;
+  background-color: $gray-100;
 
-    .container {
-      display: flex;
-      justify-content: center;
-  
-      .content-wrapper {
-        display: flex;
-        align-items: center;
-  
-        .image-container {
-          margin-right: 10rem;
-        }
-  
-        img {
-            position: relative;
-            bottom: 1rem;
-          max-width: 100%;
-          height: auto;
-          
-        }
-  
-        .editor-logo,
-        .google-logo,
-        .app-logo {
-          position: relative; 
-          left: 10px; 
-        }
-  
-        .editor-logo {
-          left: 16rem;
-          bottom: 3rem;
-        }
-  
-        .google-logo {
-          margin-left: 8.6rem; 
-          top: 5rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $gray-200;
+
+    .image-container {
+      position: relative;
+      left: 4rem;
+    }
+
+    .review-text {
+      display: grid;
+      grid-template-columns: 1f;
+      grid-area: auto;
+      margin-right: 10rem;
+      margin-top: 6rem;
+      
+    }
+
+    h1 {
+      position: relative;
+      top: 2rem;
+      color: $gray-900;
+      
+      @include d5
+    }
+
+    .app {
+      position: relative;
+      top: 1rem;
+
+      color: $gray-600;
+    }
+
+    .box1 {
+
+      padding-top: 20px;
+      
+      h3 {
+        position: relative;
+        top: 1rem;
         
-        }
-  
-        .app-logo {
-          position: relative;
-          right: 15rem;
-          
-        }
       }
+
+      p {
+        margin-top: 17px;
+        color: $gray-600;
+      }
+
+      .editor-logo {
+        position: relative;
+        left: 15rem;
+        bottom: 5.5rem;
+      }
+      
+      .star1 {
+        position: relative;
+        
+      }
+
+    }
+
+    .box2 {
+      position: relative;
+      bottom: 1rem;
+    }
+
+    .star2 {
+      position: relative;
+      bottom: 1rem;
+    }
+
+    .google-logo {
+      position: relative;
+      left: 15rem;
+      bottom: 5.5rem;
+    }
+
+    .rating {
+      position: relative;
+      color: $gray-600;
+      
+    }
+
+    .google {
+      color: $gray-600;
     }
   }
-  
+}
