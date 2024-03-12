@@ -1,0 +1,164 @@
+.courses {
+    margin-top: 3rem;
+  
+    .container {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: "logo mobile";
+      gap: 40px;
+  
+      @include lg {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo menu switch buttons";
+      }
+  
+      #logo {
+        grid-area: logo;
+      }
+  
+      #menu {
+        grid-area: menu;
+        display: none;
+  
+        @include lg {
+          display: block;
+        }
+  
+        nav {
+          display: flex;
+          gap: 15px;
+        }
+      }
+  
+      .btn-switch {
+        grid-area: switch;
+        display: none;
+  
+        @include lg {
+          display: block;
+        }
+      }
+  
+      .account-buttons {
+        grid-area: buttons;
+        display: none;
+        gap: 15px;
+        box-sizing: border-box;
+  
+        @include lg {
+          display: flex;
+        }
+      }
+  
+      .btn-mobile {
+        grid-area: mobile;
+        display: block;
+  
+        @include lg {
+          display: none;
+        }
+      }
+    }
+
+   
+
+    .bottom-container {
+     position: relative;
+     left: 10rem;
+     top: 3rem;
+
+     span {
+      margin-right: 8px;
+     }
+
+        i {
+            margin: 15px;
+        }
+
+        p {
+            margin-right: 5px;
+            color: $gray-600;
+        }
+    }
+  
+    .search-container {
+
+        position: relative;
+        left: 9.5rem;
+        top: 5rem;
+
+        form {
+
+          .category-form {
+            
+            label {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              left: 44rem;
+              margin-right: 20px; // Adjusted margin-right for the gap to the right
+              bottom: 3.4rem;
+              width: 260px;
+    
+              select {
+                padding: 8px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+                box-sizing: border-box;
+                margin-right: 30px;
+              }
+            }
+          }
+    
+          .search-input {
+            label {
+              position: relative;
+              left: 62rem;
+              bottom: 6rem;
+              display: inline-block;
+              cursor: pointer;
+              width: 290px;
+              text-align: start;
+    
+              input[type="text"] {
+                padding: 8px 30px 8px 40px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 100%;
+                box-sizing: border-box;
+              }
+    
+              span.magnifying-glass {
+                position: absolute;
+                left: calc(100% - 20px); // Adjusted left for the magnifying glass position
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+
+          .courses-tools {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4rem;
+          }
+
+
+      
+      
+  }
+  
