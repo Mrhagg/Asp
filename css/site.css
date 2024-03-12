@@ -928,3 +928,134 @@ footer .container .social-media {
   justify-content: center;
   margin-top: 4rem;
 }
+
+.signin {
+  padding: 10rem 0;
+}
+.signin .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "logo mobile";
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  .signin .container {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo menu switch buttons";
+  }
+}
+.signin .container #logo {
+  grid-area: logo;
+}
+.signin .container #menu {
+  grid-area: menu;
+  display: none;
+}
+@media (min-width: 992px) {
+  .signin .container #menu {
+    display: block;
+  }
+}
+.signin .container #menu nav {
+  display: flex;
+  gap: 15px;
+}
+.signin .container .btn-switch {
+  grid-area: switch;
+  display: none;
+}
+@media (min-width: 992px) {
+  .signin .container .btn-switch {
+    display: block;
+  }
+}
+.signin .container .account-buttons {
+  grid-area: buttons;
+  display: none;
+  gap: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .signin .container .account-buttons {
+    display: flex;
+  }
+}
+.signin .container .btn-mobile {
+  grid-area: mobile;
+  display: block;
+}
+@media (min-width: 992px) {
+  .signin .container .btn-mobile {
+    display: none;
+  }
+}
+.signin form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.signin form h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  color: #0B0F19;
+}
+.signin form p {
+  font-size: 1.2em;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  color: #565973;
+}
+.signin form p a {
+  margin-left: 5px;
+}
+.signin form .form-group {
+  margin-bottom: 20px;
+}
+.signin form .form-group input[type=checkbox] {
+  position: relative;
+  right: 19rem;
+  top: 1.7rem;
+  transform: scale(1.5);
+  color: #B4B7C9;
+}
+.signin form .form-group label[for=remember] {
+  margin-left: 2rem;
+}
+.signin form .form-group label[for=password] {
+  color: #0B0F19;
+}
+.signin form .form-group label[for=email] {
+  color: #0B0F19;
+}
+.signin form .form-group label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.signin form .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #D4D7E5;
+}
+.signin form button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  margin-top: 2rem;
+}
+.signin form .forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #6366F1;
+  text-decoration: none;
+}
+.signin form .forgot-password:hover {
+  text-decoration: underline;
+}
+.signin form a {
+  padding-top: 1rem;
+}

@@ -1,0 +1,154 @@
+.signin {
+    padding: 10rem 0;
+    
+    .container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:  "logo mobile";
+        gap: 40px;
+        
+        @include lg {
+            grid-template-columns: auto 1fr auto auto;
+            grid-template-areas:  "logo menu switch buttons";
+        }
+
+        #logo { grid-area: logo; }
+
+        #menu { 
+            grid-area: menu; 
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+            
+            nav {
+                display: flex;
+                gap: 15px;
+            }
+        }
+        
+        .btn-switch { 
+            grid-area: switch; 
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+        }
+
+        .account-buttons { 
+            grid-area: buttons; 
+            display: none;
+            gap: 15px;
+            box-sizing: border-box;
+
+            
+
+            @include lg {
+                display: flex;
+            }
+        }
+
+        .btn-mobile {
+            grid-area: mobile; 
+            display: block;
+
+            @include lg {
+                display: none;
+            }
+        }
+    }
+
+   
+    
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 10rem;
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 1rem;
+            color: $gray-900;
+           
+          }
+      
+          p {
+            font-size: 1.2em;
+            margin-bottom: 3rem;
+            margin-top: 1rem;
+            color: $gray-700;
+            
+            a {
+                margin-left: 5px;
+            }
+          }
+    
+        .form-group {
+          margin-bottom: 20px;
+
+          input[type="checkbox"] {
+            position: relative;
+            right: 19rem;
+            top: 1.7rem;
+            transform: scale(1.5);
+            color: $gray-500;
+        
+          }
+        
+          label[for="remember"] {
+            margin-left: 2rem;
+          }
+
+          label[for="password"] {
+            color: $gray-900;
+            
+          }
+
+          label[for="email"] {
+            color: $gray-900;
+          }
+          
+
+          label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+          }
+    
+          input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid $gray-400;
+          }
+        }
+    
+        button {
+          width: 100%;
+          padding: 15px;
+          font-size: 1.2em;
+          margin-top: 2rem;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: center;
+            margin-top: 10px; 
+            color: #6366F1; 
+            text-decoration: none;
+          
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          a {
+            padding-top: 1rem;
+          }
+      }
+      
+}
