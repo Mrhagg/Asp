@@ -1033,6 +1033,13 @@ footer .container .social-media {
   font-size: 1.2em;
   margin-bottom: 5px;
 }
+.signin form .form-group input[type=text]::-moz-placeholder, .signin form .form-group input[type=email]::-moz-placeholder {
+  color: #B4B7C9;
+}
+.signin form .form-group input[type=text]::placeholder,
+.signin form .form-group input[type=email]::placeholder {
+  color: #B4B7C9;
+}
 .signin form .form-group input {
   width: 100%;
   padding: 10px;
@@ -1057,5 +1064,149 @@ footer .container .social-media {
   text-decoration: underline;
 }
 .signin form a {
+  padding-top: 1rem;
+}
+
+.signup {
+  padding: 10rem 0;
+}
+.signup .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "logo mobile";
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  .signup .container {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo menu switch buttons";
+  }
+}
+.signup .container #logo {
+  grid-area: logo;
+}
+.signup .container #menu {
+  grid-area: menu;
+  display: none;
+}
+@media (min-width: 992px) {
+  .signup .container #menu {
+    display: block;
+  }
+}
+.signup .container #menu nav {
+  display: flex;
+  gap: 15px;
+}
+.signup .container .btn-switch {
+  grid-area: switch;
+  display: none;
+}
+@media (min-width: 992px) {
+  .signup .container .btn-switch {
+    display: block;
+  }
+}
+.signup .container .account-buttons {
+  grid-area: buttons;
+  display: none;
+  gap: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .signup .container .account-buttons {
+    display: flex;
+  }
+}
+.signup .container .btn-mobile {
+  grid-area: mobile;
+  display: block;
+}
+@media (min-width: 992px) {
+  .signup .container .btn-mobile {
+    display: none;
+  }
+}
+.signup form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.signup form .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.signup form .form-container h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  color: #0B0F19;
+}
+.signup form .form-container p {
+  font-size: 1.2em;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  color: #565973;
+}
+.signup form .form-container p a {
+  margin-left: 5px;
+}
+.signup form .form-container .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.signup form .form-container .form-group {
+  flex: 1;
+}
+.signup form .form-container .form-group label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.signup form .form-container .form-group input,
+.signup form .form-container .form-group button {
+  width: calc(100% - 20px); /* Adjusting the width to consider gap */
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #D4D7E5;
+}
+.signup form .form-container .form-group input[type=checkbox] {
+  position: relative;
+  right: 17.2rem;
+  bottom: 0.8rem;
+  transform: scale(1.5);
+  color: #B4B7C9;
+}
+.signup form .form-container .form-group label[for=agree] {
+  position: relative;
+  top: 1.2rem;
+  margin-left: 2.2rem;
+}
+.signup form .form-container .form-group label[for=agree] a {
+  margin-left: 1px;
+  margin-right: 3px;
+}
+.signup form .form-container .form-group label[for=firstname],
+.signup form .form-container .form-group label[for=lastname],
+.signup form .form-container .form-group label[for=password],
+.signup form .form-container .form-group label[for=email] {
+  color: #0B0F19;
+}
+.signup form .form-container .form-group input[type=text]::-moz-placeholder, .signup form .form-container .form-group input[type=email]::-moz-placeholder {
+  color: #B4B7C9;
+}
+.signup form .form-container .form-group input[type=text]::placeholder,
+.signup form .form-container .form-group input[type=email]::placeholder {
+  color: #B4B7C9;
+}
+.signup form .form-container button {
+  width: calc(100% - 20px); /* Adjusting the width to consider gap */
+  padding: 15px;
+  font-size: 1.2em;
+}
+.signup form .form-container a {
   padding-top: 1rem;
 }
