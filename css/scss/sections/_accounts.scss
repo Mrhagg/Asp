@@ -1,0 +1,116 @@
+.accounts {
+    margin-top: 3rem;
+  
+    .container {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr auto;
+      grid-template-areas: "logo mobile";
+      gap: 40px;
+      
+  
+      @include lg {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo menu switch buttons";
+      }
+  
+      #logo {
+        grid-area: logo;
+      }
+  
+      #menu {
+        grid-area: menu;
+        display: none;
+        margin-left: 5px;
+  
+        @include lg {
+          display: block;
+        }
+  
+        nav {
+          display: flex;
+          gap: 15px;
+        }
+      }
+  
+      .btn-switch {
+        grid-area: switch;
+        display: none;
+  
+        @include lg {
+          display: block;
+        }
+      }
+  
+      .account-buttons {
+        grid-area: buttons;
+        display: none;
+        gap: 15px;
+        box-sizing: border-box;
+  
+        @include lg {
+          display: flex;
+        }
+      }
+  
+      .btn-mobile {
+        grid-area: mobile;
+        display: block;
+  
+        @include lg {
+          display: none;
+        }
+      }
+    }
+
+    .sidebar {
+      margin-top: 60px;
+      margin-left: 170px;
+      
+      
+
+      h5{
+       margin-left: 10px;
+
+      }
+
+      p {
+        position: relative;
+        right: 1.5rem;
+        bottom: 0.5rem;
+      }
+
+
+      
+      button.btn-theme {
+        @include button;
+        background: $theme;
+        color: $white;
+        border: none;
+        padding: 10px 130px; 
+        cursor: pointer;
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        text-indent: -65px; 
+        position: relative;
+        right: 4rem;
+
+    
+        &:hover {
+            background: $gray-700;
+        }
+    }
+
+      
+      
+
+      .sign-out {
+        margin-top: 20px;
+        position: relative;
+        right: 2rem;
+      }
+
+     
+    }
+}

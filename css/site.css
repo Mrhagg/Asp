@@ -857,7 +857,7 @@ footer .container .social-media {
 }
 .courses .bottom-container {
   position: relative;
-  left: 10rem;
+  left: 5rem;
   top: 3rem;
 }
 .courses .bottom-container span {
@@ -872,7 +872,7 @@ footer .container .social-media {
 }
 .courses .search-container {
   position: relative;
-  left: 9.5rem;
+  left: 3.5rem;
   top: 5rem;
 }
 .courses .search-container form .category-form label {
@@ -900,7 +900,7 @@ footer .container .social-media {
   bottom: 6rem;
   display: inline-block;
   cursor: pointer;
-  width: 290px;
+  width: 300px;
   text-align: start;
 }
 .courses .search-container form .search-input label input[type=text] {
@@ -1209,4 +1209,108 @@ footer .container .social-media {
 }
 .signup form .form-container a {
   padding-top: 1rem;
+}
+
+.accounts {
+  margin-top: 3rem;
+}
+.accounts .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "logo mobile";
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  .accounts .container {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo menu switch buttons";
+  }
+}
+.accounts .container #logo {
+  grid-area: logo;
+}
+.accounts .container #menu {
+  grid-area: menu;
+  display: none;
+  margin-left: 5px;
+}
+@media (min-width: 992px) {
+  .accounts .container #menu {
+    display: block;
+  }
+}
+.accounts .container #menu nav {
+  display: flex;
+  gap: 15px;
+}
+.accounts .container .btn-switch {
+  grid-area: switch;
+  display: none;
+}
+@media (min-width: 992px) {
+  .accounts .container .btn-switch {
+    display: block;
+  }
+}
+.accounts .container .account-buttons {
+  grid-area: buttons;
+  display: none;
+  gap: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .accounts .container .account-buttons {
+    display: flex;
+  }
+}
+.accounts .container .btn-mobile {
+  grid-area: mobile;
+  display: block;
+}
+@media (min-width: 992px) {
+  .accounts .container .btn-mobile {
+    display: none;
+  }
+}
+.accounts .sidebar {
+  margin-top: 60px;
+  margin-left: 170px;
+}
+.accounts .sidebar h5 {
+  margin-left: 10px;
+}
+.accounts .sidebar p {
+  position: relative;
+  right: 1.5rem;
+  bottom: 0.5rem;
+}
+.accounts .sidebar button.btn-theme {
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #6366F1;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 130px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  text-indent: -65px;
+  position: relative;
+  right: 4rem;
+}
+.accounts .sidebar button.btn-theme:hover {
+  background: #565973;
+}
+.accounts .sidebar .sign-out {
+  margin-top: 20px;
+  position: relative;
+  right: 2rem;
 }
