@@ -1275,33 +1275,33 @@ footer .container .social-media {
 }
 .accounts .container-account {
   display: flex;
-  align-items: flex-start; /* Adjust alignment as needed */
+  align-items: flex-start;
 }
-.accounts .sidebar {
+.accounts .container-account .sidebar {
   margin-bottom: 300px;
   margin-top: 60px;
   margin-left: 170px;
   position: relative;
-  right: 4rem;
+  left: 1rem;
 }
-.accounts .sidebar::after {
+.accounts .container-account .sidebar::after {
   content: "";
   position: absolute;
   top: 0;
-  right: 50px;
+  left: 245px;
   width: 1px;
   height: 100%;
   background-color: #D4D7E5;
 }
-.accounts .sidebar h5 {
+.accounts .container-account .sidebar h5 {
   margin-left: 10px;
 }
-.accounts .sidebar p {
+.accounts .container-account .sidebar p {
   position: relative;
   right: 1.5rem;
   bottom: 0.5rem;
 }
-.accounts .sidebar button.btn-theme {
+.accounts .container-account .sidebar button.btn-theme {
   border-radius: 6px;
   text-align: center;
   font-size: 14px;
@@ -1322,60 +1322,165 @@ footer .container .social-media {
   position: relative;
   right: 4rem;
 }
-.accounts .sidebar button.btn-theme:hover {
+.accounts .container-account .sidebar button.btn-theme:hover {
   background: #565973;
 }
-.accounts .sidebar .sign-out {
+.accounts .container-account .sidebar .sign-out {
   margin-top: 20px;
   position: relative;
   right: 2rem;
 }
-.accounts .account-details {
+.accounts .container-account .container-details {
+  position: relative;
+  left: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.accounts .container-account .container-details .account-details {
   font-family: Arial, sans-serif;
   padding: 20px;
   flex: 1; /* Adjust flex property to ensure proper alignment */
 }
-.accounts .account-details h2 {
+.accounts .container-account .container-details .account-details h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-.accounts .account-details h5 {
+.accounts .container-account .container-details .account-details h5 {
   font-size: 18px;
   margin-bottom: 15px;
 }
-.accounts .account-details .labels-container {
+.accounts .container-account .container-details .account-details .labels-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  width: 70%;
 }
-.accounts .account-details .labels-container .label {
+.accounts .container-account .container-details .account-details .labels-container .label {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-.accounts .account-details .labels-container .label label {
+.accounts .container-account .container-details .account-details .labels-container .label label {
   font-size: 16px;
   margin-bottom: 5px;
 }
-.accounts .account-details .labels-container .label input[type=text],
-.accounts .account-details .labels-container .label input[type=email],
-.accounts .account-details .labels-container .label textarea {
+.accounts .container-account .container-details .account-details .labels-container .label input[type=text],
+.accounts .container-account .container-details .account-details .labels-container .label input[type=email],
+.accounts .container-account .container-details .account-details .labels-container .label textarea {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
 }
-.accounts .account-details .bio-container {
-  margin-top: 20px;
+.accounts .container-account .container-details .account-details .bio-container {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 10px;
+  width: 70%;
 }
-.accounts .account-details .bio-container label {
-  font-size: 16px;
+.accounts .container-account .container-details .account-details .bio-container label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
   margin-bottom: 5px;
 }
-.accounts .account-details .bio-container textarea {
+.accounts .container-account .container-details .account-details .bio-container textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+}
+.accounts .container-account .container-details .account-details .buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.accounts .container-account .container-details .account-details .buttons .btn-theme {
+  background: #6366F1;
+  color: #FFFFFF;
+  border: none;
+}
+.accounts .container-account .container-details .account-details .buttons .btn-theme:hover {
+  text-decoration: none;
+  background: #565973;
+  color: #FFFFFF;
+}
+.accounts .container-account .container-details .account-details .divider {
+  border-bottom: 1px solid #ccc;
+  margin-top: 50px;
+}
+.accounts .container-account .container-details .address-details {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  flex: 1;
+}
+.accounts .container-account .container-details .address-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.accounts .container-account .container-details .address-details h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.accounts .container-account .container-details .address-details .labels-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 70%;
+}
+.accounts .container-account .container-details .address-details .labels-container .label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.accounts .container-account .container-details .address-details .labels-container .label label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.accounts .container-account .container-details .address-details .labels-container .label input[type=text],
+.accounts .container-account .container-details .address-details .labels-container .label input[type=email],
+.accounts .container-account .container-details .address-details .labels-container .label textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.accounts .container-account .container-details .address-details .labels-container .label-postal-code,
+.accounts .container-account .container-details .address-details .labels-container .label-city {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.accounts .container-account .container-details .address-details .labels-container .label-postal-code label,
+.accounts .container-account .container-details .address-details .labels-container .label-city label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.accounts .container-account .container-details .address-details .labels-container .label-postal-code input[type=text],
+.accounts .container-account .container-details .address-details .labels-container .label-postal-code input[type=email],
+.accounts .container-account .container-details .address-details .labels-container .label-postal-code textarea,
+.accounts .container-account .container-details .address-details .labels-container .label-city input[type=text],
+.accounts .container-account .container-details .address-details .labels-container .label-city input[type=email],
+.accounts .container-account .container-details .address-details .labels-container .label-city textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.accounts .container-account .container-details .address-details .buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.accounts .container-account .container-details .address-details .buttons .btn-theme {
+  background: #6366F1;
+  color: #FFFFFF;
+  border: none;
+}
+.accounts .container-account .container-details .address-details .buttons .btn-theme:hover {
+  text-decoration: none;
+  background: #565973;
+  color: #FFFFFF;
 }

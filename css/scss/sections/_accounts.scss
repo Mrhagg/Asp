@@ -66,66 +66,77 @@
 
     .container-account {
       display: flex;
-      align-items: flex-start; /* Adjust alignment as needed */
-    }
+      align-items: flex-start; // Align items at the start
+      
+      
     
-    .sidebar {
-      margin-bottom: 300px;
-      margin-top: 60px;
-      margin-left: 170px;
-      position: relative;
-      right: 4rem;
-    
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 50px; // Adjust the distance from the sidebar
-        width: 1px; // Width of the border
-        height: 100%;
-        background-color: $gray-400; // Color of the border
-      }
-    
-      h5 {
-        margin-left: 10px;
-      }
-    
-      p {
+      .sidebar {
+        margin-bottom: 300px;
+        margin-top: 60px;
+        margin-left: 170px;
         position: relative;
-        right: 1.5rem;
-        bottom: 0.5rem;
-      }
-    
-      button.btn-theme {
-        @include button;
-        background: $theme;
-        color: $white;
-        border: none;
-        padding: 10px 130px;
-        cursor: pointer;
-        display: block;
-        margin-top: 20px;
-        text-align: center;
-        text-indent: -65px;
-        position: relative;
-        right: 4rem;
-    
-        &:hover {
-          background: $gray-700;
+        left: 1rem;
+        
+        
+      
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 245px; // Adjust the distance from the sidebar
+          width: 1px; // Width of the border
+          height: 100%;
+          background-color: $gray-400; // Color of the border
+        }
+
+        h5 {
+          margin-left: 10px;
+        }
+      
+        p {
+          position: relative;
+          right: 1.5rem;
+          bottom: 0.5rem;
+        }
+      
+        button.btn-theme {
+          @include button;
+          background: $theme;
+          color: $white;
+          border: none;
+          padding: 10px 130px;
+          cursor: pointer;
+          display: block;
+          margin-top: 20px;
+          text-align: center;
+          text-indent: -65px;
+          position: relative;
+          right: 4rem;
+      
+          &:hover {
+            background: $gray-700;
+          }
+        }
+      
+        .sign-out {
+          margin-top: 20px;
+          position: relative;
+          right: 2rem;
         }
       }
     
-      .sign-out {
-        margin-top: 20px;
+      .container-details {
         position: relative;
-        right: 2rem;
-      }
-    }
+        left: 2rem;
+        flex: 1; // Take up remaining space
+        display: flex;
+        flex-direction: column;
+       
     
-    .account-details {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      flex: 1; /* Adjust flex property to ensure proper alignment */
+      .account-details {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          flex: 1; /* Adjust flex property to ensure proper alignment */
     
       h2 {
         font-size: 24px;
@@ -138,9 +149,10 @@
       }
     
       .labels-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 70%;
     
         .label {
           display: flex;
@@ -162,12 +174,17 @@
           }
         }
       }
-    
+
       .bio-container {
-        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        gap: 10px;
+        width: 70%;
     
         label {
-          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
           margin-bottom: 5px;
         }
     
@@ -179,7 +196,126 @@
           font-size: 16px;
         }
       }
+
+
+
+      .buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10px;
+        
+
+        .btn-theme {
+          background: $theme;
+          color: $white;
+          border: none;
+
+          &:hover {
+            text-decoration: none;
+            background: $gray-700;
+            color: $white;
+          }
+        }
+      }
+
+          .divider {
+            border-bottom: 1px solid #ccc;
+            margin-top: 50px;
+          }
+
+        }
+        .address-details {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          flex: 1;
+    
+          h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+    
+          h5 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+    
+          .labels-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            width: 70%;
+            
+    
+            .label {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+    
+              label {
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+    
+              input[type="text"],
+              input[type="email"],
+              textarea {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+              }
+            }
+            .label-postal-code,
+            .label-city {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+          
+              label {
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+          
+              input[type="text"],
+              input[type="email"],
+              textarea {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+              }
+            }
+            
+          }
+    
+    
+          .buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+            
+    
+            .btn-theme {
+              background: $theme;
+              color: $white;
+              border: none;
+    
+              &:hover {
+                text-decoration: none;
+                background: $gray-700;
+                color: $white;
+              }
+            }
+          }
+    
+
+        }
+      }
     }
+    
+    
+
+   
     
 
     
