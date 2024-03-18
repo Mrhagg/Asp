@@ -419,12 +419,12 @@
             </div>
             <div class="label">
               <label for="phone">Phone</label>
-              <input type="text" id="phone" name="phone">
+              <input type="text" id="phone" name="phone" placeholder="Enter your phone">
             </div>
         </div>
           <div class="bio-container">
-            <label for="bio">Bio (optional)</label>
-            <textarea id="bio" name="bio" rows="4"></textarea>
+            <label for="bio" class="bio-label">Bio <span>(optional)</span></label>
+            <textarea id="bio" name="bio" rows="4">Add a short bio..</textarea>
           </div>
           <div class="buttons">
             <button class="btn-gray">Cancel</button>
@@ -433,15 +433,19 @@
           <div class="divider"></div>
         </div>
         <div class="address-details">
-          <h2>Address</h2>
+          <h5>Address</h5>
           <div class="labels-container">
-            <div class="label label address-line1">
-              <label for="address-line1">Address Line 1</label>
-              <input type="text" id="address-line1" name="address-line1" placeholder="Enter your address line">
+            <div class="single-label">
+              <div class="label label address-line1">
+                <label for="address-line1">Address Line 1</label>
+                <input type="text" id="address-line1" name="address-line1" placeholder="Enter your address line">
+              </div>
             </div>
-            <div class="label label address-line2">
-              <label for="address-line2">Address Line 2</label>
-              <input type="text" id="address-line2" name="address-line2" placeholder="Enter your second address line">
+            <div class="single-label">
+              <div class="label label address-line2">
+                <label for="address-line2">Address Line 2</label>
+                <input type="text" id="address-line2" name="address-line2" placeholder="Enter your second address line">
+              </div>
             </div>
             <div class="label label postal-code">
               <label for="postal-code">Postal Code</label>
